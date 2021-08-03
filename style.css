@@ -1,0 +1,117 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #000;
+}
+.logo {
+    position: relative;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0);
+}
+.hero-logo {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+header {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+}
+.hero-home {
+    box-shadow: inset 0px -45px 25px -14px #000;
+}
+.hero-home ul{
+    width: 100%;
+    height: 40px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.hero-home ul li{
+    list-style: none;
+    width: 20%;
+    margin: 20px;
+}
+.hero-home ul li a {
+    display: block;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 28px;
+    transition: .5s;
+    text-transform: uppercase;
+}
+.hero-home ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    animation: zoomText .1s linear forwards;
+}
+.hero-home img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+    opacity: 0;
+    transition: .5s;
+}
+.hero-home ul li a:hover + img{
+    opacity: 1;
+    z-index: -3;
+    animation: zoomIn 6s alternate forwards infinite;
+}
+.hero-line {
+    position: absolute;
+    top: 150px;
+    left: -85px;
+    opacity: .7;
+    z-index: -2;
+}
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    z-index: -4;
+}
+.hero-content {
+    position: relative;
+    top: 1505px;
+    height: 100vh;
+}
+
+
+@keyframes zoomIn {
+    0%
+    {
+        transform: scale(1);
+    }
+    100%
+    {
+        transform: scale(1.2);
+    }
+}
+@keyframes zoomText {
+    100%
+    {
+        font-size: 250%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: .1rem;
+    }
+}
