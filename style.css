@@ -1,117 +1,250 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*
+    Common CSS Classes
+*/
+.pl-50 {
+  padding-left: 50px !important;
+}
+.pr-50 {
+  padding-right: 50px !important;
 }
 
 body {
-    background-color: #000;
+  background-color: #000;
+  color: white;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 .logo {
-    position: relative;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0);
 }
 .hero-logo {
-    padding-left: 50px;
-    padding-top: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
 }
 header {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    left: 0px;
-    top: 0px;
-    overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
 }
 .hero-home {
-    box-shadow: inset 0px -45px 25px -14px #000;
+  box-shadow: inset 0px -45px 25px -14px #000;
 }
-.hero-home ul{
-    width: 100%;
-    height: 40px;
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.hero-home ul {
+  width: 100%;
+  height: 40px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.hero-home ul li{
-    list-style: none;
-    width: 20%;
-    margin: 20px;
+.hero-home ul li {
+  list-style: none;
+  width: 20%;
+  margin: 20px;
 }
 .hero-home ul li a {
-    display: block;
-    color: #fff;
-    line-height: 40px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 28px;
-    transition: .5s;
-    text-transform: uppercase;
+  display: block;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 28px;
+  transition: 0.5s;
+  text-transform: uppercase;
 }
 .hero-home ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: rgb(255, 255, 255);
-    animation: zoomText .1s linear forwards;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(255, 255, 255);
+  animation: zoomText 0.1s linear forwards;
 }
 .hero-home img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -3;
-    opacity: 0;
-    transition: .5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  opacity: 0;
+  transition: 0.5s;
 }
-.hero-home ul li a:hover + img{
-    opacity: 1;
-    z-index: -3;
-    animation: zoomIn 6s alternate forwards infinite;
+.hero-home ul li a:hover + img {
+  opacity: 1;
+  z-index: -3;
+  animation: zoomIn 6s alternate forwards infinite;
 }
 .hero-line {
-    position: absolute;
-    top: 150px;
-    left: -85px;
-    opacity: .7;
-    z-index: -2;
+  position: absolute;
+  opacity: 0.7;
+  z-index: -2;
 }
 .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .7;
-    z-index: -4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: -4;
 }
 .hero-content {
-    position: relative;
-    top: 1505px;
-    height: 100vh;
+  position: relative;
+  top: 600px;
+  height: 100vh;
+}
+.hero-description {
+  width: 50%;
+  word-wrap: break-word;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 70px;
+}
+.hero-description a {
+  text-decoration: none;
+  color: white;
+}
+.hero-content section h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 4rem;
+}
+.hero-content .product-list {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  margin: auto;
+  width: 75%;
+  grid-gap: 100px;
 }
 
+.hero-content .product-list .product-item {
+  display: flex;
+  flex-direction: row;
+}
+.hero-content .product-list .product-item .product-description {
+  word-break: break-word;
+  width: 40%;
+  padding-top: 120px;
+}
+.hero-content .product-list .product-item .product-image {
+  width: 60%;
+}
+.hero-content .product-list .product-specs {
+  display: flex;
+  flex-direction: row;
+}
+.hero-content .product-list .product-specs .product-specs-label,
+.product-specs-value {
+  width: 50%;
+  text-align: left;
+}
+.hero-content .product-list .product-specs .product-specs-value {
+  color: #ffec59;
+}
+.hero-content .product-list .product-name,
+.product-specs {
+  color: rgb(234 234 234);
+  text-transform: uppercase;
+}
+.hero-content .product-list img {
+  width: 100%;
+  object-fit: cover;
+  animation: zoomIn 10s linear forwards;
+}
+.contact-description {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.contact-description h1 {
+  text-align: center;
+}
+.reach-us {
+  display: flex;
+  justify-content: center;
+}
+.reach-us .contact {
+  width: 30%;
+  text-align: center;
+}
+.contact-description .reach-us .contact h2 {
+  margin-bottom: 20px;
+}
+.contact-description .reach-us .contact .contact-icon {
+  font-size: 40px;
+}
+.reach-us .contact p {
+  margin-top: 20px;
+}
+.reach-us .contact a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  height: 100px;
+  background-color: rgb(88, 88, 88);
+  box-shadow: inset 0px 10px 20px 2px #151515;
+}
+.social-links {
+  display: flex;
+  height: 60%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.social-links .social-icon {
+  width: 4%;
+}
+.social-links .social-icon a {
+  text-decoration: none;
+  font-size: 24px;
+  color: rgb(15, 15, 15);
+}
+.social-icon .fa-facebook-f {
+    color: #4267B2;
+}
+.social-icon .fa-twitter {
+    color: #1DA1F2;
+}
+.social-icon .fa-youtube {
+    color: #FF0000;
+}
+.social-icon .fa-instagram {
+    color: #cd486b;
+}
+.social-icon .fa-linkedin-in {
+    color: #0e76a8;
+}
+footer .copyright {
+    text-align: center;
+    font-size: 12px;
+}
 
 @keyframes zoomIn {
-    0%
-    {
-        transform: scale(1);
-    }
-    100%
-    {
-        transform: scale(1.2);
-    }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }
 @keyframes zoomText {
-    100%
-    {
-        font-size: 250%;
-    }
+  100% {
+    font-size: 250%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    body {
-        font-size: .1rem;
-    }
+  body {
+    font-size: 0.1rem;
+  }
 }
